@@ -76,7 +76,9 @@ export function FolderDropzone() {
             <Typography variant="subtitle1">Загруженные файлы:</Typography>
             <ul>
               {files.map((file, idx) => (
-                <li key={idx}>{file.webkitRelativePath || file.name}</li>
+                <li className="item" key={idx}>
+                  <p>{file.webkitRelativePath || file.name}</p>
+                </li>
               ))}
             </ul>
           </>
